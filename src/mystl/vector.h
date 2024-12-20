@@ -152,8 +152,6 @@ namespace MySTL
             return _data + _size;
         }
 
-    private:
-        // 扩容
         void reserve(size_t newCapacity)
         {
             if (newCapacity > _capacity)

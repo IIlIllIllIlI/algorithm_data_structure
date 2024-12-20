@@ -2,7 +2,7 @@
 UseTab: Never
 IndentWidth: 4
 TabWidth: 4
-BreakBeforeBraces: Allman
+BreakBeforeBraces: Attach   #Allman 括号另起一行
 AllowShortIfStatementsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: false
 IndentCaseLabels: false

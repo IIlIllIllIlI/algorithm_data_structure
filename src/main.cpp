@@ -4,8 +4,7 @@
 
 #include "leetcode/Q700-Q799/Q704.h"
 
-int main()
-{
+int main() {
     LeetCode::Q704 s;
     MySTL::vector<int> nums1;
 
@@ -17,6 +16,8 @@ int main()
     // EXPECT_EQ(s.search(nums, 0), -1);
     // EXPECT_EQ(s.search(nums, -1), 0);
     // EXPECT_EQ(s.search(nums, -2), 1);
+
+    std::vector<int> stdv;
 
     system("pause");
     return 0;
