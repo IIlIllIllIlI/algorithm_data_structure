@@ -9,7 +9,7 @@ namespace LeetCode {
     class Q977 {
     public:
         vector<int> sortedSquares(vector<int>& nums) {
-            Solution2 s;
+            Solution3 s;
             return s.sortedSquares(nums);
         }
 
@@ -80,6 +80,26 @@ namespace LeetCode {
                     }
                 }
                 return ans;
+            }
+        };
+
+        class Solution3 {
+            // 双指针排序，从两端到中间
+            // https://programmercarl.com/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.html#%E6%80%9D%E8%B7%AF
+        public:
+            vector<int> sortedSquares(vector<int>& nums) {
+                int k = nums.size() - 1;
+                vector<int> result(nums.size(), 0);
+                for (int i = 0, j = nums.size() - 1; i <= j;) { // 注意这里要i <= j，因为最后要处理两个元素
+                    if (nums[i] * nums[i] < nums[j] * nums[j]) {
+                        result[k--] = nums[j] * nums[j];
+                        j--;
+                    } else {
+                        result[k--] = nums[i] * nums[i];
+                        i++;
+                    }
+                }
+                return result;
             }
         };
     };
