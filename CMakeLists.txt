@@ -11,8 +11,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/bin")           
 file(GLOB SOURCE 
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" 
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/MySTL/*.h"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/MySTL/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/mystl/*.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/mystl/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/leetcode/Q1-Q99/*.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/leetcode/Q200-Q299/*.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/leetcode/Q300-Q399/*.h"
@@ -25,7 +25,7 @@ add_executable(Executable ${SOURCE})
 enable_testing()
 add_subdirectory(googletest)
 file(GLOB TEST_SOURCE 
-    # "${CMAKE_CURRENT_SOURCE_DIR}/test/mystl_test/*.cpp"       # STL 测试
+    "${CMAKE_CURRENT_SOURCE_DIR}/test/mystl_test/*.cpp"       # STL 测试
     # "${CMAKE_CURRENT_SOURCE_DIR}/test/leetcode_test/*.cpp"    # 回归测试
     "${CMAKE_CURRENT_SOURCE_DIR}/test/leetcode_test/current/*.cpp"
 )
